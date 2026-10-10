@@ -9,7 +9,7 @@ button:hover{background:var(--accent)}
 ul{list-style:none;margin:0;padding:0;height:100%;overflow:auto}
 li{padding:0 6px;white-space:pre;cursor:default}
 li.sel{background:var(--accent)}
-pre{margin:0;height:100%;overflow:auto;white-space:pre;user-select:text}
+pre{margin:0;height:100%;overflow-x:hidden;overflow-y:auto;white-space:pre;user-select:text}
 </style></head><body><div id="root" style="height:100%"></div><script>
 const root = document.getElementById('root');
 let kind = "", el = null, last = null, topLine = -1;
@@ -82,12 +82,14 @@ function render(m) {
   }
   last = m;
 }
-// Keys that move between widgets or leave belong to the program, not the element.
+// Keys belong to the program, as in the cells: Esc and Tab always, and every
+// plain key when the element is not a text field. Ctrl and Meta stay here, so
+// copying works.
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' || e.key === 'Tab') {
-    e.preventDefault();
-    websh.send({type: 'key', value: e.shiftKey && e.key === 'Tab' ? 'Backtab' : e.key});
-  }
+  const leave = e.key === 'Escape' || e.key === 'Tab';
+  if (!leave && (kind === 'input' || e.ctrlKey || e.metaKey || e.altKey)) return;
+  e.preventDefault();
+  websh.send({type: 'key', value: e.shiftKey && e.key === 'Tab' ? 'Backtab' : e.key});
 });
 websh.onmessage(render);
 </script></body></html>

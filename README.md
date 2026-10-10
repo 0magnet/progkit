@@ -10,8 +10,8 @@ terminal. Where the host offers placements and shipped widgets, as websh does,
 an input, a button, a list or a text view is also laid over its cells as the
 page's own element. The person types into a real text field, clicks a real
 button and selects and copies real text, and what they do reaches the program
-as it would from the keyboard. Esc and Tab pass from an element back to the
-program.
+as it would from the keyboard. Keys typed in an element reach the program too:
+Esc and Tab from a text field, and every plain key from the others.
 
 ```go
 app, err := progkit.Open() // the terminal, asked first what its host offers

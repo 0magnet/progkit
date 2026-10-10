@@ -279,19 +279,24 @@ type MsgEvent struct {
 	*progressive.Event
 }
 
-// Key is the key a placed element passed on to the program (Escape, Tab or
-// Backtab, which leave the element), or nil.
+// Key is the key a placed element passed on to the program, named as the
+// browser names it (KeyboardEvent.key), or nil.
 func (m Msg) Key() *tcell.EventKey {
 	if m.Type != "key" {
 		return nil
 	}
-	switch m.Value {
-	case "Escape":
-		return tcell.NewEventKey(tcell.KeyEscape, "", 0)
-	case "Tab":
-		return tcell.NewEventKey(tcell.KeyTab, "", 0)
-	case "Backtab":
-		return tcell.NewEventKey(tcell.KeyBacktab, "", 0)
+	if k, ok := browserKeys[m.Value]; ok {
+		return tcell.NewEventKey(k, "", 0)
+	}
+	if r := []rune(m.Value); len(r) == 1 {
+		return tcell.NewEventKey(tcell.KeyRune, m.Value, 0)
 	}
 	return nil
+}
+
+var browserKeys = map[string]tcell.Key{
+	"Escape": tcell.KeyEscape, "Tab": tcell.KeyTab, "Backtab": tcell.KeyBacktab,
+	"Enter": tcell.KeyEnter, "Backspace": tcell.KeyBackspace, "Delete": tcell.KeyDelete,
+	"ArrowUp": tcell.KeyUp, "ArrowDown": tcell.KeyDown, "ArrowLeft": tcell.KeyLeft, "ArrowRight": tcell.KeyRight,
+	"PageUp": tcell.KeyPgUp, "PageDown": tcell.KeyPgDn, "Home": tcell.KeyHome, "End": tcell.KeyEnd,
 }
