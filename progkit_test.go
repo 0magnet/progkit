@@ -177,3 +177,10 @@ func TestElementPassesKeysOn(t *testing.T) {
 		t.Error("a lone modifier became a key")
 	}
 }
+
+// A goroutine that redraws after the program has quit must not panic.
+func TestRedrawAfterClose(t *testing.T) {
+	a, _ := testApp(t, nil)
+	a.Close()
+	a.Redraw()
+}

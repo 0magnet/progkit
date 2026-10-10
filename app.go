@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"io"
 	"sync"
+	"sync/atomic"
 
 	"github.com/0magnet/websh/childtty"
 	"github.com/0magnet/websh/progressive"
@@ -33,6 +34,7 @@ type App struct {
 	frame    map[string]shownPlacement
 	handlers map[string]func(Msg)
 	mu       sync.Mutex
+	closed   atomic.Bool
 }
 
 type shownPlacement struct {
@@ -99,6 +101,7 @@ func (a *App) Caps() *progressive.Caps { return a.caps }
 
 // Close takes the placements away and gives the terminal back.
 func (a *App) Close() {
+	a.closed.Store(true)
 	if len(a.shown) > 0 {
 		a.write(progressive.Clear())
 	}
@@ -107,6 +110,11 @@ func (a *App) Close() {
 
 // Redraw asks Run for a new frame, from any goroutine.
 func (a *App) Redraw() {
+	if a.closed.Load() {
+		return
+	}
+	// Close may still win the race and close the queue under this send.
+	defer func() { _ = recover() }() //nolint:errcheck
 	select {
 	case a.Screen.EventQ() <- tcell.NewEventInterrupt(nil):
 	default:
