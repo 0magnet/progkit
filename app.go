@@ -154,6 +154,8 @@ func (a *App) Run(draw func(f *Frame), handle func(ev tcell.Event) bool) {
 // Draw draws one frame with draw and shows it, with its placements.
 func (a *App) Draw(draw func(f *Frame)) {
 	a.Screen.Clear()
+	// Only a widget that has the cursor shows it; it does so as it draws.
+	a.Screen.HideCursor()
 	a.frame = map[string]shownPlacement{}
 	f := &Frame{App: a, Screen: a.Screen}
 	f.W, f.H = a.Screen.Size()
