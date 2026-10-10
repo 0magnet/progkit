@@ -173,6 +173,9 @@ func TestElementPassesKeysOn(t *testing.T) {
 	if k := (Msg{Type: "key", Value: "ArrowDown"}).Key(); k == nil || k.Key() != tcell.KeyDown {
 		t.Errorf("ArrowDown from an element = %v", k)
 	}
+	if k := (Msg{Type: "key", Value: "Ctrl+s"}).Key(); k == nil || !IsCtrl(k, 's') {
+		t.Errorf("Ctrl+s from an element = %v", k)
+	}
 	if k := (Msg{Type: "key", Value: "Shift"}).Key(); k != nil {
 		t.Error("a lone modifier became a key")
 	}
