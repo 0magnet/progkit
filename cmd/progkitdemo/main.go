@@ -9,12 +9,27 @@ import (
 	"os"
 	"time"
 
+	"github.com/0magnet/calvin/clihelp"
 	"github.com/gdamore/tcell/v3"
+	"github.com/spf13/cobra"
 
 	"github.com/0magnet/progkit"
 )
 
 func main() {
+	cmd := &cobra.Command{
+		Use:          "progkitdemo",
+		Short:        "show each progkit widget",
+		SilenceUsage: true,
+		Run:          func(*cobra.Command, []string) { demo() },
+	}
+	clihelp.Init(cmd, "progkitdemo")
+	if err := cmd.Execute(); err != nil {
+		os.Exit(1)
+	}
+}
+
+func demo() {
 	app, err := progkit.Open()
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
