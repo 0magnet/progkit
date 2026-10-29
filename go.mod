@@ -4,14 +4,14 @@ go 1.26.6
 
 require (
 	github.com/0magnet/calvin v0.0.1-0.20261013221715-da6581155df3
-	github.com/0magnet/websh v0.0.1-0.20261028112929-8dd7f87d850a
+	github.com/0magnet/websh v0.0.1-0.20261029114000-80435ff67f81
 	github.com/gdamore/tcell/v3 v3.6.0
 	github.com/rivo/uniseg v0.4.7
 	github.com/spf13/cobra v1.10.2
 )
 
 require (
-	github.com/0magnet/bottle v0.0.1-0.20261013221653-12057b62ab20 // indirect
+	github.com/0magnet/bottle v0.0.1-0.20261028202309-2b922f28f74e // indirect
 	github.com/0magnet/coloredcobra v1.0.4-0.20261012213101-faa6bd8f94c5 // indirect
 	github.com/clipperhouse/displaywidth v0.11.0 // indirect
 	github.com/clipperhouse/uax29/v2 v2.7.0 // indirect

@@ -1,11 +1,11 @@
-github.com/0magnet/bottle v0.0.1-0.20261013221653-12057b62ab20 h1:7zyrT1tt9BG9njqreGNJNwuuhd1pXr09xwLMDG+uEB4=
-github.com/0magnet/bottle v0.0.1-0.20261013221653-12057b62ab20/go.mod h1:02z8sWzqF3QH4SjMxnx5bnysFUqsw9CdUTtIj+CIxkw=
+github.com/0magnet/bottle v0.0.1-0.20261028202309-2b922f28f74e h1:mVhZH+mh1N2+Z1Cp+FXqSrtZmAmliiM+NRZE6k2kdSk=
+github.com/0magnet/bottle v0.0.1-0.20261028202309-2b922f28f74e/go.mod h1:02z8sWzqF3QH4SjMxnx5bnysFUqsw9CdUTtIj+CIxkw=
 github.com/0magnet/calvin v0.0.1-0.20261013221715-da6581155df3 h1:9H++x4esxGkKAnqqZhAadZgvgg7tIvP2mKwaX+/NvE0=
 github.com/0magnet/calvin v0.0.1-0.20261013221715-da6581155df3/go.mod h1:d4VzbsL3w6CReFvi3Jbv5V/0U6/BQabOl3feTiuVG7A=
 github.com/0magnet/coloredcobra v1.0.4-0.20261012213101-faa6bd8f94c5 h1:EitsijGOC/B/n+ziuxUBkIy9xhgVnmcDZVOW4eE1xGc=
 github.com/0magnet/coloredcobra v1.0.4-0.20261012213101-faa6bd8f94c5/go.mod h1:XOyBWsYWPuG3gboQHaOve/ubY8HaTqCGjJ+791sF5cM=
-github.com/0magnet/websh v0.0.1-0.20261028112929-8dd7f87d850a h1:EYkhidhobzWmqg8cGLfyrprVVLL3daBhkeGp11+IuFQ=
-github.com/0magnet/websh v0.0.1-0.20261028112929-8dd7f87d850a/go.mod h1:iNrMHC1GBdfqZWFWjSzZcx4SDayhWMqWQNnRFz4PoNY=
+github.com/0magnet/websh v0.0.1-0.20261029114000-80435ff67f81 h1:cwq59KvSGNh0iddiQ6NFuU1As0H2pBFeAWktKeDqLhE=
+github.com/0magnet/websh v0.0.1-0.20261029114000-80435ff67f81/go.mod h1:aOxwyJ0S8+RdsVBVZt5dNcRfMmd63BsUfjKmKm9OIRU=
 github.com/clipperhouse/displaywidth v0.11.0 h1:lBc6kY44VFw+TDx4I8opi/EtL9m20WSEFgwIwO+UVM8=
 github.com/clipperhouse/displaywidth v0.11.0/go.mod h1:bkrFNkf81G8HyVqmKGxsPufD3JhNl3dSqnGhOoSD/o0=
 github.com/clipperhouse/uax29/v2 v2.7.0 h1:+gs4oBZ2gPfVrKPthwbMzWZDaAFPGYK72F0NJv2v7Vk=
