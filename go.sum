@@ -4,8 +4,8 @@ github.com/0magnet/calvin v0.0.1-0.20261109140133-887794fc87eb h1:TIRm6eSE+ZJWf7
 github.com/0magnet/calvin v0.0.1-0.20261109140133-887794fc87eb/go.mod h1:tA4Bml06K/K3kO3d3IqSP2Uks2E3ycaBrzo4b0dzLgM=
 github.com/0magnet/coloredcobra v1.0.4-0.20261012213101-faa6bd8f94c5 h1:EitsijGOC/B/n+ziuxUBkIy9xhgVnmcDZVOW4eE1xGc=
 github.com/0magnet/coloredcobra v1.0.4-0.20261012213101-faa6bd8f94c5/go.mod h1:XOyBWsYWPuG3gboQHaOve/ubY8HaTqCGjJ+791sF5cM=
-github.com/0magnet/websh v0.0.1-0.20261112140315-f8c2ded42deb h1:GpgQ5URPgNgUNdq9ou8jHoUpFNUMG4hT+cTBAZHHwMg=
-github.com/0magnet/websh v0.0.1-0.20261112140315-f8c2ded42deb/go.mod h1:ft53y7/hwTO2udIhniSo/4Yhvo1BkE62iWwMVflaB2c=
+github.com/0magnet/websh v0.0.1-0.20261114122222-cfdf371f06c7 h1:DJt25I8NIKqzNDFs4CBlAwsA2r/AGRlPkfnNCjWupog=
+github.com/0magnet/websh v0.0.1-0.20261114122222-cfdf371f06c7/go.mod h1:zgXqa/G3ycXebLRVUrBj5ZjVOL0peK9MdDJwxpmxW38=
 github.com/clipperhouse/displaywidth v0.11.0 h1:lBc6kY44VFw+TDx4I8opi/EtL9m20WSEFgwIwO+UVM8=
 github.com/clipperhouse/displaywidth v0.11.0/go.mod h1:bkrFNkf81G8HyVqmKGxsPufD3JhNl3dSqnGhOoSD/o0=
 github.com/clipperhouse/uax29/v2 v2.7.0 h1:+gs4oBZ2gPfVrKPthwbMzWZDaAFPGYK72F0NJv2v7Vk=
