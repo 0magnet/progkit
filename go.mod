@@ -4,7 +4,7 @@ go 1.26.6
 
 require (
 	github.com/0magnet/calvin v0.0.1-0.20261109140133-887794fc87eb
-	github.com/0magnet/websh v0.0.1-0.20261119143717-a2461de73980
+	github.com/0magnet/websh v0.0.1-0.20261120141207-935dcca5bcac
 	github.com/gdamore/tcell/v3 v3.6.0
 	github.com/rivo/uniseg v0.4.7
 	github.com/spf13/cobra v1.10.2
