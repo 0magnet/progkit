@@ -3,8 +3,8 @@ module github.com/0magnet/progkit
 go 1.26.6
 
 require (
-	github.com/0magnet/calvin v0.0.1-0.20261123113739-17ec6c31723c
-	github.com/0magnet/websh v0.0.1-0.20261125155041-38c9124db3d6
+	github.com/0magnet/calvin v0.0.1-0.20261125222219-4228c77b6748
+	github.com/0magnet/websh v0.0.1-0.20261126153202-8e5238d70cff
 	github.com/gdamore/tcell/v3 v3.6.0
 	github.com/rivo/uniseg v0.4.7
 	github.com/spf13/cobra v1.10.2
